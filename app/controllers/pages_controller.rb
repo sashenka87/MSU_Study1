@@ -44,6 +44,8 @@ class PagesController < ApplicationController
     used = @stance.sources.group(:source_name).pluck(:source_name)
 
     @sources_used = source_names.select { |i| used.include?(i[1])}
+
+    redirect_to :action => :goodbye if @sources_used.empty?
   end
 
   private

@@ -51,7 +51,13 @@ describe PagesController do
       @stance = FactoryGirl.create(:stance, :participant => @participant)
     end 
 
+    it "redirects to goodbye" do
+      get 'ranking', {}, valid_session
+      response.should redirect_to(:action => :goodbye)
+    end
+
     it "returns http success" do
+      source = FactoryGirl.create(:source, :stance => @stance, :source_name => "blog")
       get 'ranking', {}, valid_session
       response.should be_success
     end
