@@ -1,0 +1,41 @@
+<%= form_for @participant, :html => { :class => "form" } do |f| %>
+  <%= render "shared/error_messages", :object => f.object %>
+
+  <div class="row">
+    <div class="col-sm-6 col-md-4">
+      <div class="form-group">
+        <%= f.label :first_name, :class => "control-label" %>
+        <%= f.text_field :first_name, :class => "form-control" %>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4">
+      <div class="form-group">
+        <%= f.label :last_name, :class => "control-label" %>
+        <%= f.text_field :last_name, :class => "form-control" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 col-md-4">
+      <div class="form-group">
+        <%= f.label :instructor, :class => "control-label" %>
+        <%= f.text_field :instructor, :class => "form-control" %>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4">
+      <div class="form-group">
+        <%= f.label :email, :class => "control-label" %>
+        <%= f.text_field :email, :class => "form-control" %>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit "I consent to this study", :class => "btn btn-success" %>
+    <%= link_to "I decline", goodbye_path(:decline => true), :class => 'btn btn-default' %>
+  </div>
+<% end %>

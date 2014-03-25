@@ -1,0 +1,29 @@
+.no-top {
+  margin-top: 0 !important;
+}
+
+.no-bottom {
+  margin-bottom: 0 !important;
+}
+
+.center {
+  text-align: center;
+}
+
+.one-line{
+  white-space:nowrap;
+}
+
+.display-none {
+  display: none;
+}
+
+.max-full-width {
+  max-width: 100%;
+}
+
+.panel-body, .well {
+  p:last-child {
+    margin-bottom: 0px;
+  }
+}

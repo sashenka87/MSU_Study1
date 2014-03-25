@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stance:</strong>
+  <%= @ranking.stance_id %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @ranking.category %>
+</p>
+
+<p>
+  <strong>Useful ranking:</strong>
+  <%= @ranking.useful_ranking %>
+</p>
+
+<p>
+  <strong>Useful justification:</strong>
+  <%= @ranking.useful_justification %>
+</p>
+
+<p>
+  <strong>Trustworthy ranking:</strong>
+  <%= @ranking.trustworthy_ranking %>
+</p>
+
+<p>
+  <strong>Trustworthy justification:</strong>
+  <%= @ranking.trustworthy_justification %>
+</p>
+
+<p>
+  <strong>Accurate ranking:</strong>
+  <%= @ranking.accurate_ranking %>
+</p>
+
+<p>
+  <strong>Accurate justification:</strong>
+  <%= @ranking.accurate_justification %>
+</p>
+
+<p>
+  <strong>Interesting ranking:</strong>
+  <%= @ranking.interesting_ranking %>
+</p>
+
+<p>
+  <strong>Interesting justification:</strong>
+  <%= @ranking.interesting_justification %>
+</p>
+
+<%= link_to 'Edit', edit_ranking_path(@ranking) %> |
+<%= link_to 'Back', rankings_path %>
