@@ -1,0 +1,23 @@
+.navbar-brand {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+// list of variables at https://github.com/thomas-mcdonald/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_variables.scss
+
+@import "bootstrap";
+
+.field_with_errors {
+  @extend .has-error;
+}
+
+.navbar-brand {
+  img {
+    height: 25px;
+    opacity: 0.7;
+    
+    &:hover{
+      opacity: 1.0;
+    }
+  }
+}

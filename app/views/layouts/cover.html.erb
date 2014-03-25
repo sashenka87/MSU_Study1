@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag    "application", "cover", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+
+      <div class="cover-container">
+        <div class="masthead clearfix">
+          <div class="inner">
+            <h3 class="masthead-brand"></h3>
+            <ul class="nav masthead-nav">
+            </ul>
+          </div>
+        </div>
+
+        <div class="inner cover">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

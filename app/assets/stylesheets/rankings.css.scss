@@ -1,0 +1,13 @@
+// Place all the styles related to the Rankings controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.ranking_form > * > * > * {
+  td:first-child {
+    width: 150px;
+  }
+
+  td:last-child {
+    width: 40%;
+  }
+}

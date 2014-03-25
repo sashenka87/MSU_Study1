@@ -1,0 +1,19 @@
+<%= form_for(@stance) do |f| %>
+  <%= render "shared/error_messages", :object => f.object %>
+
+  <div class="field">
+    <%= f.label :participant_id %><br>
+    <%= f.number_field :participant_id %>
+  </div>
+  <div class="field">
+    <%= f.label :supporting %><br>
+    <%= f.number_field :supporting %>
+  </div>
+  <div class="field">
+    <%= f.label :statement %><br>
+    <%= f.text_area :statement %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

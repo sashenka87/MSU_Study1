@@ -1,0 +1,45 @@
+<h1>Listing rankings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stance</th>
+      <th>Category</th>
+      <th>Useful ranking</th>
+      <th>Useful justification</th>
+      <th>Trustworthy ranking</th>
+      <th>Trustworthy justification</th>
+      <th>Accurate ranking</th>
+      <th>Accurate justification</th>
+      <th>Interesting ranking</th>
+      <th>Interesting justification</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rankings.each do |ranking| %>
+      <tr>
+        <td><%= ranking.stance_id %></td>
+        <td><%= ranking.category %></td>
+        <td><%= ranking.useful_ranking %></td>
+        <td><%= ranking.useful_justification %></td>
+        <td><%= ranking.trustworthy_ranking %></td>
+        <td><%= ranking.trustworthy_justification %></td>
+        <td><%= ranking.accurate_ranking %></td>
+        <td><%= ranking.accurate_justification %></td>
+        <td><%= ranking.interesting_ranking %></td>
+        <td><%= ranking.interesting_justification %></td>
+        <td><%= link_to 'Show', ranking %></td>
+        <td><%= link_to 'Edit', edit_ranking_path(ranking) %></td>
+        <td><%= link_to 'Destroy', ranking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ranking', new_ranking_path %>

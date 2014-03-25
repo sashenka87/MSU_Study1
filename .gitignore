@@ -1,0 +1,31 @@
+# Mac OS specific
+.DS_Store
+
+# Text editor temp files
+*~
+
+# Sensitive info
+.env*
+!.env.example
+
+# Log files
+/log/*
+
+# tmp files
+/tmp/*
+
+# Sass
+*.sassc
+.sass-cache
+
+# Bundle
+/vendor/bundle
+/.bundle
+
+# rspec
+.rspec
+
+# rvm/rbenv
+.rvmrc
+.ruby-gemset
+# .ruby-version

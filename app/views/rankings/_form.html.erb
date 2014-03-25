@@ -1,0 +1,57 @@
+<%= form_for(@ranking) do |f| %>
+  <% if @ranking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ranking.errors.count, "error") %> prohibited this ranking from being saved:</h2>
+
+      <ul>
+      <% @ranking.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :stance_id %><br>
+    <%= f.number_field :stance_id %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.number_field :category %>
+  </div>
+  <div class="field">
+    <%= f.label :useful_ranking %><br>
+    <%= f.number_field :useful_ranking %>
+  </div>
+  <div class="field">
+    <%= f.label :useful_justification %><br>
+    <%= f.text_field :useful_justification %>
+  </div>
+  <div class="field">
+    <%= f.label :trustworthy_ranking %><br>
+    <%= f.number_field :trustworthy_ranking %>
+  </div>
+  <div class="field">
+    <%= f.label :trustworthy_justification %><br>
+    <%= f.text_field :trustworthy_justification %>
+  </div>
+  <div class="field">
+    <%= f.label :accurate_ranking %><br>
+    <%= f.number_field :accurate_ranking %>
+  </div>
+  <div class="field">
+    <%= f.label :accurate_justification %><br>
+    <%= f.text_field :accurate_justification %>
+  </div>
+  <div class="field">
+    <%= f.label :interesting_ranking %><br>
+    <%= f.number_field :interesting_ranking %>
+  </div>
+  <div class="field">
+    <%= f.label :interesting_justification %><br>
+    <%= f.text_field :interesting_justification %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
