@@ -1,4 +1,4 @@
-# MultipleSourceUse
+# MultipleSourceUse [![Build Status](https://travis-ci.org/cyrusstoller/MSU_Study1.png)](https://travis-ci.org/cyrusstoller/MSU_Study1)
 
 ## Getting your development environment setup
 
