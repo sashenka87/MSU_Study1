@@ -60,12 +60,12 @@ class PagesController < ApplicationController
 
   def source_names
     [
-      ["Blog Post", "blog"],
-      ["Analysis Essay", "essay"],
-      ["Wikipedia Entry", "wikipedia"],
-      ["Newspaper Article", "newspaper"],
-      ["Public Opinion Survey", "public_opinion"],
-      ["Twitter", "tweets"]
+      ["Multiple Intelligence Theory", "blog"],
+      ["Triarchic Theory of Intelligence", "essay"],
+      ["Fixed and Growth Mindset", "wikipedia"],
+      ["Fluid and Crystalized Intelligence", "newspaper"],
+      ["General Intelligence Factor", "public_opinion"],
+      ["Assessing IQ", "tweets"]
     ]
   end
 end
