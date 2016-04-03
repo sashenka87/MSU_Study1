@@ -60,12 +60,12 @@ class PagesController < ApplicationController
 
   def source_names
     [
-      ["Overconsumption is a Grave Threat to Humanity", "blog"],
-      ["Building a Less Wasteful Economy", "essay"],
-      ["The Violent Side Effects of High Fertility Rates", "wikipedia"],
-      ["Technology and Population", "newspaper"],
-      ["Empower Women for the Health of the Planet", "public_opinion"],
-      ["More Efficient Food Production", "tweets"]
+      ["Overconsumption is a Grave Threat", "blog"],
+      ["Build a Less Wasteful Economy", "essay"],
+      ["The Violent Side Effects of High Fertility", "newspaper"],
+      ["Technology and Population", "public_opinion"],
+      ["Empower Women", "tweets"],
+      ["More Efficient Food Production", "wikipedia"]
     ]
   end
 end
