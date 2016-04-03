@@ -1,8 +1,7 @@
 <%= form_for @stance, :html => { :class => "ranking_form" } do |f| %>
 
 <div class="alert alert-info">
-	Please select the order in which you visited sources in the library from <strong>first</strong> to
-	<strong>last</strong>.
+	Think about the sources you used while researching overpopulation.
 </div>
 
 <% @sources_used.each_with_index do |source, index| %>
@@ -14,7 +13,8 @@
 	<thead>
 		<tr>
 			<th></th>
-			<th>Rank the source you visited <strong>first</strong> as 1</th>
+			<th>Please select the order in which you visited sources in the library from <strong>first</strong> to
+	<strong>last</strong>.  Rank the source you visited <strong>first</strong> as 1</th>
 			<th>Please tell us what you remember about the author of each source.</th>
 		</tr>
 	</thead>
