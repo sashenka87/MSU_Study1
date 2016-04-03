@@ -60,12 +60,12 @@ class PagesController < ApplicationController
 
   def source_names
     [
-      ["Multiple Intelligence Theory", "blog"],
-      ["Triarchic Theory of Intelligence", "essay"],
-      ["Fixed and Growth Mindset", "wikipedia"],
-      ["Fluid and Crystalized Intelligence", "newspaper"],
-      ["General Intelligence Factor", "public_opinion"],
-      ["Assessing IQ", "tweets"]
+      ["Overconsumption is a Grave Threat to Humanity", "blog"],
+      ["Building a Less Wasteful Economy", "essay"],
+      ["The Violent Side Effects of High Fertility Rates", "wikipedia"],
+      ["Technology and Population", "newspaper"],
+      ["Empower Women for the Health of the Planet", "public_opinion"],
+      ["More Efficient Food Production", "tweets"]
     ]
   end
 end
