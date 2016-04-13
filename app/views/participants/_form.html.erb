@@ -1,6 +1,7 @@
 <%= form_for @participant, :html => { :class => "form" } do |f| %>
   <%= render "shared/error_messages", :object => f.object %>
 
+
   <div class="row">
     <div class="col-sm-6 col-md-4">
       <div class="form-group">
@@ -31,7 +32,7 @@
         <%= f.text_field :email, :class => "form-control" %>
       </div>
     </div>
-
+  </div>
 
 
   <div class="actions">
