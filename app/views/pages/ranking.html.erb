@@ -1,8 +1,10 @@
 <%= form_for @stance, :html => { :class => "ranking_form" } do |f| %>
 
-<div class="alert alert-info">
-	Please <strong>don't</strong> use your notes for the questions that follow. Think about the sources you used while researching overpopulation.
-</div>
+  <div class="alert alert-success">
+      <h4 class="no-bottom">
+     Please don't use your notes for the questions that follow. Think about the sources you used while researching overpopulation.
+      </h4>
+    </div>
 
 <% @sources_used.each_with_index do |source, index| %>
 	<input type="hidden" value="<%= source[1] %>"
