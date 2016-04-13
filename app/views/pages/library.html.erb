@@ -112,16 +112,8 @@
       <%= form_for @stance, :html => { :id => "stance_form" } do |f| %>
         <div class="modal-body">
 
-          <%= f.radio_button :supporting, 0 %>
-          <%= f.label :supporting, "Yes, overpopulation is a major threat", :value => 0 %>
-          <br>
-          <%= f.radio_button :supporting, 1 %>
-          <%= f.label :supporting, "No, overpopulation is not a major threat", :value => 1 %>
-          <br>
-          <%= f.radio_button :supporting, 2 %>
-          <%= f.label :supporting, "Other", :value => 2 %>
           <br><br>
-          <%= f.text_area :statement, :class => "form-control", :rows => 5, 
+          <%= f.text_area :statement, :class => "form-control", :rows => 15, 
             :placeholder => "Please write your argument here." %>
 
         </div>
