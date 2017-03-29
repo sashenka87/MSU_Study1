@@ -60,12 +60,12 @@ class PagesController < ApplicationController
 
   def source_names
     [
-      ["Multiple Intelligence Theory", "blog"],
-      ["Triarchic Theory of Intelligence", "essay"],
-      ["Fixed and Growth Mindset", "wikipedia"],
-      ["Fluid and Crystalized Intelligence", "newspaper"],
-      ["General Intelligence Factor", "public_opinion"],
-      ["Assessing IQ", "tweets"]
+      ["Tracking Students Produces Results", "blog"],
+      ["Eliminate Gifted, Expand School-Wide", "essay"],
+      ["The Future Depends on Gifted Students", "wikipedia"],
+      ["Quality Education, Not Gifted Education", "newspaper"],
+      ["Gifted Education is a Gift for Teachers", "public_opinion"],
+      ["Gifted Identification is Random", "tweets"]
     ]
   end
 end
