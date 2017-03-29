@@ -62,10 +62,10 @@ class PagesController < ApplicationController
     [
       ["Tracking Students Produces Results", "blog"],
       ["Eliminate Gifted, Expand School-Wide", "essay"],
-      ["The Future Depends on Gifted Students", "wikipedia"],
-      ["Quality Education, Not Gifted Education", "newspaper"],
-      ["Gifted Education is a Gift for Teachers", "public_opinion"],
-      ["Gifted Identification is Random", "tweets"]
+      ["Gifted Identification is Random", "wikipedia"],
+      ["The Future Depends on Gifted Students", "newspaper"],
+      ["Not Gifted, But Quality Education", "public_opinion"],
+      ["Gifted Education is a Gift for Teachers", "tweets"]
     ]
   end
 end
