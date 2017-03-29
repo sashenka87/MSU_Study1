@@ -1,8 +1,8 @@
 <%= form_for @stance, :html => { :class => "ranking_form" } do |f| %>
 
 <div class="alert alert-info">
-	Please rank each source you used from <strong>most useful</strong> to
-	<strong>least useful</strong>.
+	Please rank each source you used from <strong>most informative</strong> to
+	<strong>least informative</strong>.
 </div>
 
 <% @sources_used.each_with_index do |source, index| %>
@@ -14,8 +14,8 @@
 	<thead>
 		<tr>
 			<th></th>
-			<th>Rank the source you consider to be <strong>most useful</strong> as 1</th>
-			<th>Please justify your ranking of each source.</th>
+			<th>Rank the source you consider to be <strong>most informative</strong> as 1</th>
+			<th>Without using your notes, please identify the <strong>main idea</strong> of each source.</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -50,7 +50,7 @@
 		<tr>
 			<th></th>
 			<th>Rank the source you consider to be <strong>most trustworthy</strong> as 1</th>
-			<th>Please justify your ranking of each source.</th>
+			<th>Without looking at your notes, please identify the author or publisher of each source.</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -75,16 +75,16 @@
 </table>
 
 <div class="alert alert-info">
-	Please rank the <strong>information</strong> in each source you used from <strong>most accurate</strong> to
-	<strong>least accurate</strong>.
+	Please rank each source you used from <strong>most convincing</strong> to
+	<strong>least convincing</strong>.
 </div>
 
 <table class="table table-bordered">
 	<thead>
 		<tr>
 			<th></th>
-			<th>Rank the source you consider to have the <strong>most accurate information</strong> as 1</th>
-			<th>Please justify your ranking of each source.</th>
+			<th>Rank the source you consider to be the <strong>most convincing</strong> as 1</th>
+			<th>Please identify anything else you want to know about the information in each source or any critical questions you may have.</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -108,39 +108,6 @@
 	</tbody>
 </table>
 
-<div class="alert alert-info">
-	Please rank each source you used from <strong>most interesting</strong> to
-	<strong>least interesting</strong>.
-</div>
-
-<table class="table table-bordered">
-	<thead>
-		<tr>
-			<th></th>
-			<th>Rank the source you consider to be <strong>most interesting</strong> as 1</th>
-			<th>Please justify your ranking of each source.</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% @sources_used.each_with_index do |source, index| %>
-			<tr>
-				<td><%= source[0] %></td>
-				<td>
-					<% (1..@sources_used.length).each do |i| %>
-						<%= i %>
-						<input type="radio" class="interesting<%= i %>" value="<%= i %>"
-							name="stance[rankings_attributes][<%= index %>][interesting_ranking]" />
-						&nbsp;&nbsp;
-					<% end %>
-				</td>
-				<td>
-					<input type="text"  class="form-control" placeholder="Please enter your reasoning" 
-						name="stance[rankings_attributes][<%= index %>][interesting_justification]" />
-				</td>
-			</tr>
-		<% end %>
-	</tbody>
-</table>
 
 <%= f.submit "I'm Finished!", :class => "btn btn-primary" %>
 
