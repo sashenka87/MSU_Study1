@@ -1,4 +1,4 @@
-<% prompt = "Which definition(s) of intelligence <strong>best</strong> reflect what intelligence really is?" %>
+<% prompt = "Write an argument explaining whether or not your elementary school <strong>should have a gifted and talented program</strong>." %>
 
 <p>
   Please use the source library below to research information to respond to the following prompt:
@@ -10,7 +10,7 @@
   </h4>
 
   <p>
-    Please take notes while you research.  You will not be able to refer to the sources while composing your response.    
+    In researching information to inform your argument, please consider where the informtaion you're using comes from and who wrote it. 
   </p>
 </div>
 
@@ -82,13 +82,13 @@
           Please rate this source:
         </div>
 
-        <p class="instructions">How <strong>useful</strong> was this source?</p>
-        <%= render "shared/mm_line", :num => 50 %>
         <p class="instructions">How <strong>trustworthy</strong> was this source?</p>
         <%= render "shared/mm_line", :num => 50 %>
-        <p class="instructions">How <strong>accurate was the information</strong> in this source?</p>
+        <p class="instructions">How <strong>persuasive</strong> was this source?</p>
         <%= render "shared/mm_line", :num => 50 %>
-        <p class="instructions">How <strong>interesting</strong> was this source?</p>
+        <p class="instructions">How <strong>convincing</strong> was this source?</p>
+        <%= render "shared/mm_line", :num => 50 %>
+        <p class="instructions">How <strong>credible</strong> was this source?</p>
         <%= render "shared/mm_line", :num => 50 %>
 
       </div>
@@ -113,16 +113,16 @@
         <div class="modal-body">
 
           <%= f.radio_button :supporting, 0 %>
-          <%= f.label :supporting, "G/General Intelligence", :value => 0 %>
+          <%= f.label :supporting, "Yes, my school should have a gifted and talented program", :value => 0 %>
           <br>
           <%= f.radio_button :supporting, 1 %>
-          <%= f.label :supporting, "Multiple Intelligence Theory", :value => 1 %>
+          <%= f.label :supporting, "No, my school should not have a gifted and talented program", :value => 1 %>
           <br>
           <%= f.radio_button :supporting, 2 %>
           <%= f.label :supporting, "Other", :value => 2 %>
           <br><br>
           <%= f.text_area :statement, :class => "form-control", :rows => 5, 
-            :placeholder => "Please explain why you consider this definition to best reflect <strong>intelligence</strong>, using specific information from the sources." %>
+            :placeholder => "Please write an arugment explaining why your elementary school should or should not have a gifted and talented program.  Please be sure to use specific information from the sources provided to support your argument." %>
 
         </div>
         <div class="modal-footer">
