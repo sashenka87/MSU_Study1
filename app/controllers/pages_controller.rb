@@ -64,7 +64,7 @@ class PagesController < ApplicationController
       ["Gifted Education is Unequal", "essay"],
       ["Gifted Identification is Random", "wikipedia"],
       ["The Future Depends on Gifted Students", "newspaper"],
-      ["Quality Education For All", "public_opinion"],
+      ["We Need Quality Education For All", "public_opinion"],
       ["Gifted Education is a Gift for Teachers", "tweets"]
     ]
   end
