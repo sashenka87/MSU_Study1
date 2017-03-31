@@ -61,10 +61,10 @@ class PagesController < ApplicationController
   def source_names
     [
       ["Tracking Students Produces Results", "blog"],
-      ["Eliminate Gifted, Expand School-Wide", "essay"],
+      ["Gifted Education is Unequal", "essay"],
       ["Gifted Identification is Random", "wikipedia"],
       ["The Future Depends on Gifted Students", "newspaper"],
-      ["Not Gifted, But Quality Education", "public_opinion"],
+      ["Quality Education For All", "public_opinion"],
       ["Gifted Education is a Gift for Teachers", "tweets"]
     ]
   end
