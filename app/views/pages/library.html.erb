@@ -1,4 +1,4 @@
-<% prompt = "Write an argument explaining whether or not your elementary school should have a gifted and talented program." %>
+<% prompt = "Write an argument supporting or opposing the United States adopting a universal basic income." %>
 
 <p>
   Please use the source library below to research information to respond to the following prompt:
@@ -10,7 +10,7 @@
   </h4>
 
   <p>
-    In researching your argument, please consider where the informtaion you're using comes from and who wrote it. 
+    In researching, please consider arguments both in favor of and opposing the adopting of a universal basic income.
   </p>
 </div>
 
@@ -84,11 +84,11 @@
 
         <p class="instructions">How <strong>trustworthy</strong> was this source?</p>
         <%= render "shared/mm_line", :num => 50 %>
-        <p class="instructions">How <strong>biased</strong> was this source?</p>
+        <p class="instructions">How <strong>relevant</strong> was this source?</p>
         <%= render "shared/mm_line", :num => 50 %>
-        <p class="instructions">How <strong>convincing</strong> was this source?</p>
+        <p class="instructions">How <strong>informative</strong> was this source?</p>
         <%= render "shared/mm_line", :num => 50 %>
-        <p class="instructions">How <strong>persuasive</strong> was this source?</p>
+        <p class="instructions">How <strong>easy to understand</strong> was this source?</p>
         <%= render "shared/mm_line", :num => 50 %>
 
       </div>
@@ -113,16 +113,16 @@
         <div class="modal-body">
 
           <%= f.radio_button :supporting, 0 %>
-          <%= f.label :supporting, "Yes, my school should have a gifted and talented program", :value => 0 %>
+          <%= f.label :supporting, "Yes, the U.S. should adopt a universal basic income", :value => 0 %>
           <br>
           <%= f.radio_button :supporting, 1 %>
-          <%= f.label :supporting, "No, my school should not have a gifted and talented program", :value => 1 %>
+          <%= f.label :supporting, "No, the U.S. should not adopt a universal basic income", :value => 1 %>
           <br>
           <%= f.radio_button :supporting, 2 %>
           <%= f.label :supporting, "Other", :value => 2 %>
           <br><br>
           <%= f.text_area :statement, :class => "form-control", :rows => 20, 
-            :placeholder => "Please write an argument explaining why your elementary school should or should not have a gifted and talented program.  Please be sure to use specific information from the sources provided to support your argument." %>
+            :placeholder => "Please write an argument about whether or not the U.S. should adopt a universal basic income. Please use specific information from the sources provided." %>
 
         </div>
         <div class="modal-footer">
