@@ -62,7 +62,7 @@ class PagesController < ApplicationController
     [
       ["UBI is a Right", "blog"],
       ["UBI Will End Poverty", "essay"],
-      ["UBI Takes From the Poor, Gives to the Rich", "wikipedia"],
+      ["UBI Takes From the Poor", "wikipedia"],
       ["UBI Saves the Future for Work", "newspaper"],
       ["No UBI, Humans Need to Work", "public_opinion"],
       ["UBI is Unaffordable", "tweets"]
