@@ -60,12 +60,12 @@ class PagesController < ApplicationController
 
   def source_names
     [
-      ["Tracking Students Produces Results", "blog"],
-      ["Gifted Education is Unequal", "essay"],
-      ["Gifted Identification is Random", "wikipedia"],
-      ["The Future Depends on Gifted Students", "newspaper"],
-      ["We Need Quality Education For All", "public_opinion"],
-      ["Gifted Education is a Gift for Teachers", "tweets"]
+      ["UBI is a Right", "blog"],
+      ["UBI Will End Poverty", "essay"],
+      ["UBI Takes From the Poor, Gives to the Rich", "wikipedia"],
+      ["UBI Saves the Future for Work", "newspaper"],
+      ["No UBI, Humans Need to Work", "public_opinion"],
+      ["UBI is Unaffordable", "tweets"]
     ]
   end
 end
