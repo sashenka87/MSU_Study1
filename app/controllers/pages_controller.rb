@@ -60,12 +60,12 @@ class PagesController < ApplicationController
 
   def source_names
     [
-      ["Prostitution is Female Oppression", "blog"],
-      ["Prostitution is Violent, Trust Me", "essay"],
-      ["Prostitution Increases Trafficking", "newspaper"],
-      ["Sex Work Improves Public Health", "public_opinion"],
-      ["Sex Workers Have a Right to Labor", "tweets"],
-      ["Sex Work is a Civil Right", "wikipedia"]
+      ["Con: Prostitution is Female Oppression", "blog"],
+      ["Con: Prostitution is Violent, Trust Me", "essay"],
+      ["Con: Prostitution Increases Trafficking", "newspaper"],
+      ["Pro: Sex Work Improves Public Health", "public_opinion"],
+      ["Pro: Sex Workers Have a Right to Labor", "tweets"],
+      ["Pro: Sex Work is a Civil Right", "wikipedia"]
     ]
   end
 end
