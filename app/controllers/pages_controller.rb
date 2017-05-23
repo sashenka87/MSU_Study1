@@ -60,12 +60,12 @@ class PagesController < ApplicationController
 
   def source_names
     [
-      ["Tracking Students Produces Results", "blog"],
-      ["Gifted Education is Unequal", "essay"],
-      ["Gifted Identification is Random", "wikipedia"],
-      ["The Future Depends on Gifted Students", "newspaper"],
-      ["We Need Quality Education For All", "public_opinion"],
-      ["Gifted Education is a Gift for Teachers", "tweets"]
+      ["Prostitution is Female Oppression", "blog"],
+      ["Prostitution is Violent, Trust Me", "essay"],
+      ["Prostitution Increases Trafficking", "wikipedia"],
+      ["Sex Work is a Civil Right", "newspaper"],
+      ["Sex Work Improves Public Health", "public_opinion"],
+      ["Sex Workers Have a Right to Labor", "tweets"]
     ]
   end
 end
