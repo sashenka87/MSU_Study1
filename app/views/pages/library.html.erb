@@ -1,4 +1,4 @@
-<% prompt = "Write an argument explaining whether or not your elementary school should have a gifted and talented program." %>
+<% prompt = "Write an argument explaining whether or not we should legalize prostitution/sex work." %>
 
 <p>
   Please use the source library below to research information to respond to the following prompt:
@@ -8,10 +8,6 @@
   <h4>
     <%= prompt %>
   </h4>
-
-  <p>
-    In researching your argument, please consider where the informtaion you're using comes from and who wrote it. 
-  </p>
 </div>
 
 <br>
@@ -84,11 +80,11 @@
 
         <p class="instructions">How <strong>trustworthy</strong> was this source?</p>
         <%= render "shared/mm_line", :num => 50 %>
-        <p class="instructions">How <strong>biased</strong> was this source?</p>
+        <p class="instructions">How <strong>interesting</strong> was this source?</p>
         <%= render "shared/mm_line", :num => 50 %>
         <p class="instructions">How <strong>convincing</strong> was this source?</p>
         <%= render "shared/mm_line", :num => 50 %>
-        <p class="instructions">How <strong>persuasive</strong> was this source?</p>
+        <p class="instructions">How <strong>reliable</strong> was this source?</p>
         <%= render "shared/mm_line", :num => 50 %>
 
       </div>
@@ -113,16 +109,16 @@
         <div class="modal-body">
 
           <%= f.radio_button :supporting, 0 %>
-          <%= f.label :supporting, "Yes, my school should have a gifted and talented program", :value => 0 %>
+          <%= f.label :supporting, "Yes, we should legalize prostitution/sex work", :value => 0 %>
           <br>
           <%= f.radio_button :supporting, 1 %>
-          <%= f.label :supporting, "No, my school should not have a gifted and talented program", :value => 1 %>
+          <%= f.label :supporting, "No, we should not legalize prostitution/sex work", :value => 1 %>
           <br>
           <%= f.radio_button :supporting, 2 %>
           <%= f.label :supporting, "Other", :value => 2 %>
           <br><br>
           <%= f.text_area :statement, :class => "form-control", :rows => 20, 
-            :placeholder => "Please write an argument explaining why your elementary school should or should not have a gifted and talented program.  Please be sure to use specific information from the sources provided to support your argument." %>
+            :placeholder => "Please write an argument explaining whether or not we should legalize prostitution/sex work.  Please be sure to use specific information from the sources provided to support your argument." %>
 
         </div>
         <div class="modal-footer">
