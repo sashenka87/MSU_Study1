@@ -63,9 +63,9 @@ class PagesController < ApplicationController
       ["Con: Prostitution is Female Oppression", "blog"],
       ["Con: Prostitution is Violent, Trust Me", "essay"],
       ["Con: Prostitution Increases Trafficking", "newspaper"],
-      ["Pro: Sex Work Improves Public Health", "public_opinion"],
-      ["Pro: Sex Workers Have a Right to Labor", "tweets"],
-      ["Pro: Sex Work is a Civil Right", "wikipedia"]
+      ["Pro: Sex Work is a Civil Right", "public_opinion"],
+      ["Pro: Sex Work Improves Public Health", "tweets"],
+      ["Pro: Sex Workers Have a Right to Labor ", "wikipedia"]
     ]
   end
 end
