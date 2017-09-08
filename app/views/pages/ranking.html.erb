@@ -15,7 +15,7 @@
 		<tr>
 			<th></th>
 			<th>Rank the source you consider to be <strong>most informative</strong> as 1</th>
-			<th>Without using your notes, please identify the <strong>main idea</strong> of each source.</th>
+			<th>Please identify anything else you want to know about the information in each source or any critical questions you have.</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -40,73 +40,6 @@
 	</tbody>
 </table>
 
-<div class="alert alert-info">
-	Please rank each source you used from <strong>most trustworthy</strong> to
-	<strong>least trustworthy</strong>.
-</div>
-
-<table class="table table-bordered">
-	<thead>
-		<tr>
-			<th></th>
-			<th>Rank the source you consider to be <strong>most trustworthy</strong> as 1</th>
-			<th>Without looking at your notes, please identify the author or publisher of each source.</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% @sources_used.each_with_index do |source, index| %>
-			<tr>
-				<td><%= source[0] %></td>
-				<td>
-					<% (1..@sources_used.length).each do |i| %>
-						<%= i %>
-						<input type="radio" class="trustworthy<%= i %>" value="<%= i %>"
-							name="stance[rankings_attributes][<%= index %>][trustworthy_ranking]" />
-						&nbsp;&nbsp;
-					<% end %>
-				</td>
-				<td>
-					<input type="text"  class="form-control" placeholder="Author/publisher" 
-						name="stance[rankings_attributes][<%= index %>][trustworthy_justification]" />
-				</td>
-			</tr>
-		<% end %>
-	</tbody>
-</table>
-
-<div class="alert alert-info">
-	Please rank each source you used from <strong>most convincing</strong> to
-	<strong>least convincing</strong>.
-</div>
-
-<table class="table table-bordered">
-	<thead>
-		<tr>
-			<th></th>
-			<th>Rank the source you consider to be the <strong>most convincing</strong> as 1</th>
-			<th>Please identify anything else you want to know about the information in each source or any critical questions you have.</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% @sources_used.each_with_index do |source, index| %>
-			<tr>
-				<td><%= source[0] %></td>
-				<td>
-					<% (1..@sources_used.length).each do |i| %>
-						<%= i %>
-						<input type="radio" class="accurate<%= i %>" value="<%= i %>"
-							name="stance[rankings_attributes][<%= index %>][accurate_ranking]" />
-						&nbsp;&nbsp;
-					<% end %>
-				</td>
-				<td>
-					<input type="text"  class="form-control" placeholder="Critical questions" 
-						name="stance[rankings_attributes][<%= index %>][accurate_justification]" />
-				</td>
-			</tr>
-		<% end %>
-	</tbody>
-</table>
 
 
 <%= f.submit "I'm Finished!", :class => "btn btn-primary" %>
