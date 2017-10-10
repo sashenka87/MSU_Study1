@@ -29,7 +29,7 @@
 
 <div class="row">
   <div class="col-md-4 col-md-offset-4">
-    <%= link_to "Click here to continue", "#", :class => "btn btn-lg btn-primary btn-block",
+    <%= link_to "Click here to write your response", "#", :class => "btn btn-lg btn-primary btn-block",
     :data => { :toggle => "modal", :target => "#continue_modal", :backdrop => "static", :keyboard => false } %>
   </div>
 </div>
@@ -80,7 +80,7 @@
 
         <p class="instructions">How <strong>trustworthy</strong> was this source?</p>
         <%= render "shared/mm_line", :num => 50 %>
-        <p class="instructions">How <strong>relevant</strong> was this source?</p>
+        <p class="instructions">How much did this source <strong>inform you</strong> about the topic?</p>
         <%= render "shared/mm_line", :num => 50 %>
         <p class="instructions">How much did this source <strong>help you </strong>in formulating your response?</p>
         <%= render "shared/mm_line", :num => 50 %>
@@ -118,7 +118,7 @@
           <%= f.label :supporting, "Other", :value => 2 %>
           <br><br>
           <%= f.text_area :statement, :class => "form-control", :rows => 20, 
-            :placeholder => "Please write an argument explaining whether or not we should legalize prostitution/sex work.  Please be sure to use specific information from the sources provided to support your argument." %>
+            :placeholder => "Please write an argument about whether or not we should legalize prostitution/sex work.  Please be sure to use specific information from the sources provided to support your argument." %>
 
         </div>
         <div class="modal-footer">
