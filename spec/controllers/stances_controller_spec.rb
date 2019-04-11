@@ -20,7 +20,7 @@ require 'spec_helper'
 
 describe StancesController do
   render_views
-  
+
   # This should return the minimal set of attributes required to create a valid
   # Stance. As you add validations to Stance, be sure to
   # adjust the attributes here as well.
@@ -87,7 +87,7 @@ describe StancesController do
 
       it "redirects to the created stance" do
         post :create, {:stance => valid_attributes}, valid_session
-        response.should redirect_to(ranking_path)
+        response.should redirect_to(goodbye_path)
       end
     end
 

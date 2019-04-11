@@ -4,6 +4,8 @@ MultipleSourceUse::Application.routes.draw do
 
   resources :participants, :except => [:edit, :update]
   get '/directions' => 'pages#directions'
+  get '/task_analysis' => 'pages#task_analysis'
+  post '/task_analysis' => 'pages#update_task_analysis'
   get '/library'    => 'pages#library'
   resources :stances
   get '/ranking'    => 'pages#ranking'
@@ -14,7 +16,7 @@ MultipleSourceUse::Application.routes.draw do
   get "dashboard/rankings", :defaults => { :format => :csv }
   get "dashboard/sources", :defaults => { :format => :csv }
   get "dashboard/stances", :defaults => { :format => :csv }
-  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

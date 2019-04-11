@@ -1,10 +1,13 @@
+<% left_text ||= "Very little" %>
+<% right_text ||= "A lot" %>
+
 <div class="mm_line">
-  Very little <strong>|
+  <%= left_text %> <strong>|
   <% for i in 0..num %>
     <%= content_tag :span, :data => { :value => i * 100/num }, :class => "hover_to_x" do %>
       .
     <% end %>
   <% end %>
-  |</strong> A lot
+  |</strong> <%= right_text %>
 </div>
 <br>

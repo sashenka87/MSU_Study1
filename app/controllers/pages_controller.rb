@@ -20,20 +20,35 @@ class PagesController < ApplicationController
   def directions
     @title = "Directions"
     if session[:directions]
-      redirect_to :action => :library
+      redirect_to :action => :task_analysis
     else
       session[:directions] = true
     end
+  end
+
+  def task_analysis
+    @title = "Task Analysis"
+
+    unless @participant.task_analysis.blank?
+      redirect_to :action => :library
+    end
+  end
+
+  def update_task_analysis
+    @participant.task_analysis = params[:task_analysis]
+    @participant.save
+
+    redirect_to :action => :library
   end
 
   def library
     @title = "Library"
     @sources = source_names.shuffle
 
-    @stance = Stance.new
+    @stance = Stance.new(source_order: @sources.map { |s| s[1] }.join(","))
 
     if @participant.stance
-      redirect_to :action => :ranking
+      redirect_to :action => :goodbye
     end
   end
 
@@ -65,7 +80,13 @@ class PagesController < ApplicationController
       ["Prostitution Increases Trafficking", "newspaper"],
       ["Sex Work is a Civil Right", "public_opinion"],
       ["Sex Work Improves Public Health", "tweets"],
-      ["Sex Workers Have a Right to Labor", "wikipedia"]
+      ["Sex Workers Have a Right to Labor", "wikipedia"],
+      ["Source 7", "source7"],
+      ["Source 8", "source8"],
+      ["Source 9", "source9"],
+      ["Source 10", "source10"],
+      ["Source 11", "source11"],
+      ["Source 12", "source12"]
     ]
   end
 end

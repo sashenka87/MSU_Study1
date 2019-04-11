@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20140319045634
+# Schema version: 20140320051046
 #
 # Table name: sources
 #
@@ -13,7 +13,7 @@
 #  interesting   :integer
 #  created_at    :datetime
 #  updated_at    :datetime
-#  source_name   :string(255)
+#  source_name   :string
 #  depth         :integer          default(0)
 #
 # Indexes

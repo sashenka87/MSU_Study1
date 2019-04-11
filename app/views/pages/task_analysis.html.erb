@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-sm-12 col-md-8 col-md-offset-2">
+    <div class="alert alert-info">
+      <p>
+        You will be asked to write an argument about whether or not the U.S. should
+        legalize prostitution / sex work.
+      </p>
+    </div>
+
+    <%= form_tag '/task_analysis' do %>
+      <%= text_area_tag :task_analysis, nil, :class => "form-control", :rows => 15, :required => true %>
+      <br>
+      <%= submit_tag "Continue", :class => "btn btn-success" %>
+    <% end %>
+  </div><!-- .col-sm-12 col-md-6 -->
+</div><!-- .row -->

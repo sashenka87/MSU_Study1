@@ -7,13 +7,32 @@ start_time = 0
 end_time = 0
 source_name = ""
 depth = 0
+modal_id = null
 
 ready = ->
 	$(".source-btn").click ->
 		num_sources += 1
 		start_time = new Date().getTime()
 		source_name = $(this).attr("id")
+		modal_id = $(this).data("textModal")
 		depth = 0
+
+	$(".go_to_source").click ->
+		pre_reason = $("#source_pre_modal").find('input[name=pre_reason]:checked').val()
+		pre_reason_other_text = $("#source_pre_modal").find('input:text[name=pre_reason_other_text]').val()
+
+		if pre_reason && (pre_reason != 8 || pre_reason_other_text)
+			$("#stance_form").append(create_hidden_field(num_sources, 'pre_reason', pre_reason))
+			$("#stance_form").append(create_hidden_field(num_sources, 'pre_reason_other_text', pre_reason_other_text))
+
+			# Reset state
+			$("#source_pre_modal").find('input[name=pre_reason]:checked').prop('checked', false)
+			$("#source_pre_modal").find('input:text[name=pre_reason_other_text]').val('')
+
+			$(this).parents('.modal').modal('hide')
+			$(modal_id).modal('show')
+		else
+			alert("You haven't filled everything out yet!")
 
 	$(".more_source_info").click ->
 		$(this).hide()
@@ -31,9 +50,8 @@ ready = ->
 		end_time = new Date().getTime()
 		$('#source_evaluation_modal').modal
 			backdrop: "static"
-			keyboard: false	
+			keyboard: false
 		$(this).parents('.modal').modal('hide')
-
 
 	$(".source_evaluation_modal_close").click ->
 		values = get_rating_values()
@@ -42,20 +60,28 @@ ready = ->
 			reset_mm_line()
 			time_duration = end_time - start_time
 
-			hidden_inputs = create_nested_attributes(source_name, time_duration, depth, values[0], values[1], values[2], values[3])
+			$("#source_evaluation_modal").find('input[name=post_reason]:checked').prop('checked', false)
+			$("#source_evaluation_modal").find('input:text[name=post_reason_other_text]').val('')
+
+			hidden_inputs = create_nested_attributes(source_name, time_duration, depth, values)
 			$("#stance_form").append(hidden_inputs)
 		else
 			alert("You haven't filled everything out yet!")
 
 
 get_rating_values = ->
-	useful = $("#source_evaluation_modal").find(".selected_x").get(0)
-	trustworthy = $("#source_evaluation_modal").find(".selected_x").get(1)
-	accurate = $("#source_evaluation_modal").find(".selected_x").get(2)
-	interesting = $("#source_evaluation_modal").find(".selected_x").get(3)
+	like_text = $("#source_evaluation_modal").find(".selected_x").get(0)
+	sentiment = $("#source_evaluation_modal").find(".selected_x").get(1)
+	post_reason = $("#source_evaluation_modal").find('input[name=post_reason]:checked').val()
+	post_reason_other_text = $("#source_evaluation_modal").find('input:text[name=post_reason_other_text]').val()
 
-	if useful && trustworthy && accurate && interesting
-		[$(useful).data('value'), $(trustworthy).data('value'), $(accurate).data('value'), $(interesting).data('value')]
+	if like_text && sentiment && post_reason && (post_reason != 8 || post_reason_other_text)
+		{
+			like_text: $(like_text).data('value'),
+			sentiment: $(sentiment).data('value'),
+			post_reason: post_reason,
+			post_reason_other_text: post_reason_other_text
+		}
 	else
 		false
 
@@ -64,15 +90,15 @@ reset_mm_line = ->
 	$(".selected_x").removeClass("selected_x");
 
 
-create_nested_attributes = (source_name, time_duration, depth, trustworthy, useful, accurate, interesting) ->
+create_nested_attributes = (source_name, time_duration, depth, values) ->
 	r = create_hidden_field(num_sources, "source_name", source_name)
 	r += create_hidden_field(num_sources, "order", num_sources)
 	r += create_hidden_field(num_sources, "time_duration", time_duration)
 	r += create_hidden_field(num_sources, "depth", depth)
-	r += create_hidden_field(num_sources, "trustworthy", trustworthy)
-	r += create_hidden_field(num_sources, "useful", useful)
-	r += create_hidden_field(num_sources, "accurate", accurate)
-	r += create_hidden_field(num_sources, "interesting", interesting)
+
+	for key, value of values
+		r += create_hidden_field(num_sources, key, value)
+
 	num_sources += 1
 	return r
 

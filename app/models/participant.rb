@@ -1,15 +1,15 @@
 # == Schema Information
-# Schema version: 20140318012953
+# Schema version: 20140320051046
 #
 # Table name: participants
 #
 #  id         :integer          not null, primary key
-#  session_id :string(255)
-#  ip_address :string(255)
-#  first_name :string(255)
-#  last_name  :string(255)
-#  instructor :string(255)
-#  email      :string(255)
+#  session_id :string
+#  ip_address :string
+#  first_name :string
+#  last_name  :string
+#  instructor :string
+#  email      :string
 #  created_at :datetime
 #  updated_at :datetime
 #

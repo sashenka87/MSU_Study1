@@ -30,7 +30,7 @@ class StancesController < ApplicationController
 
     respond_to do |format|
       if @stance.save
-        format.html { redirect_to ranking_path }
+        format.html { redirect_to goodbye_path }
         format.json { render action: 'show', status: :created, location: @stance }
       else
         format.html { render action: 'new' }
@@ -71,9 +71,12 @@ class StancesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def stance_params
-      params.require(:stance).permit(:supporting, :statement,
-        :sources_attributes => [:order, :time_duration, :trustworthy, :useful, :accurate, :interesting, :source_name, :depth],
-        :rankings_attributes => [:source_name, :useful_ranking, :useful_justification, 
+      params.require(:stance).permit(:supporting, :statement, :source_order,
+        :sources_attributes => [
+          :order, :time_duration, :trustworthy, :useful, :accurate, :interesting, :source_name, :depth,
+          :pre_reason, :pre_reason_other_text, :like_text, :sentiment, :post_reason, :post_reason_other_text
+        ],
+        :rankings_attributes => [:source_name, :useful_ranking, :useful_justification,
           :trustworthy_ranking, :trustworthy_justification, :accurate_ranking, :accurate_justification,
           :interesting_ranking, :interesting_justification])
     end

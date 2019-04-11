@@ -17,8 +17,9 @@
     <% row.each do |source_array| %>
     <div class="col-md-4">
       <%= link_to source_array[0], "#", :class => "btn btn-lg btn-success btn-block source-btn", :id => source_array[1],
-        :data => { 
-          :toggle => "modal", :target => "##{source_array[1]}_modal", :backdrop => "static", :keyboard => false
+        :data => {
+          :toggle => "modal", :target => "#source_pre_modal", :backdrop => "static", :keyboard => false,
+          :text_modal => "##{source_array[1]}_modal"
         } %>
       <br>
       <br>
@@ -36,8 +37,69 @@
 
 <!-- Modals -->
 
+<%= content_tag :div, :class => "modal source_pre_modal fade", :id => "source_pre_modal" do %>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">
+          Source Selection
+        </h4>
+      </div>
+      <div class="modal-body">
+        <p class="instructions">Please select the <strong>main</strong> reason you chose this text:</p>
+        <div class="radio">
+          <label>
+            <input type="radio" name="pre_reason" value="1">
+            It seemed <strong>relevant</strong> to the task
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="pre_reason" value="2">
+            It seemed <strong>trustworthy</strong>
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="pre_reason" value="3">
+            It seemd like it <strong>agreed with my point of view</strong>
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="pre_reason" value="4">
+            It seemed <strong>interesting</strong>
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="pre_reason" value="5">
+            It seemed like it <strong>related</strong> to information in the <strong>other texts</strong>
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="pre_reason" value="6">
+            This was the <strong>next text</strong> listed or I <strong>randomly</strong> chose this text
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="pre_reason" value="7">
+            Other (please explain):
+          </label>
+        </div>
+        <input type="text" name="pre_reason_other_text" class="form-control pre_reason_other_text">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default go_to_source">Go to source</button>
+      </div>
+    </div>
+  </div>
+<% end %>
+
 <% @sources.each do |source| %>
-  <%= content_tag :div, :class => "modal source_modal fade", 
+  <%= content_tag :div, :class => "modal source_modal fade",
     :id => "#{source[1]}_modal", :data => { :name => source[0] } do %>
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
@@ -49,7 +111,7 @@
         </div>
         <div class="modal-body">
           <p>
-            <%= link_to "Click here to learn more about this source", "#", :class => "more_source_info" %>
+            <%= link_to "Click here to learn more about this source", "#", :class => "btn btn-default more_source_info" %>
           </p>
 
           <%= render "sources/#{source[1]}" %>
@@ -79,14 +141,60 @@
         </div>
 
         <p class="instructions">How <strong>trustworthy</strong> was this source?</p>
-        <%= render "shared/mm_line", :num => 50 %>
+        <%= render "shared/mm_line", :num => 50, :left_text => "Not at all", :right_text => "A lot" %>
         <p class="instructions">How much did this source <strong>inform you</strong> about the topic?</p>
-        <%= render "shared/mm_line", :num => 50 %>
-        <p class="instructions">How much did this source <strong>help you </strong>in formulating your response?</p>
-        <%= render "shared/mm_line", :num => 50 %>
-        <p class="instructions">How much <strong>more information do you need</strong> to formulate your response?</p>
-        <%= render "shared/mm_line", :num => 50 %>
+        <%= render "shared/mm_line", :num => 40, :left_text => "Very negative", :right_text => "Very positive" %>
 
+        <p class="instructions">Please select the <strong>main</strong> reason why you <strong>liked or disliked</strong> this text:</p>
+        <div class="radio">
+          <label>
+            <input type="radio" name="post_reason" value="1">
+            It's <strong>relevance</strong> or irrelevance to the task
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="post_reason" value="2">
+            It's <strong>trustworthiness</strong> or lack of trustworthiness
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="post_reason" value="3">
+            It's <strong>agreement</strong> or disagreement <strong>with my point of view</strong>
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="post_reason" value="4">
+            It's <strong>easiness</strong> or difficulty <strong>to understand</strong>
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="post_reason" value="5">
+            It's <strong>interestingness</strong> or lack of interestingness
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="post_reason" value="6">
+            It's <strong>informativeness</strong> or lack of informativeness
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="post_reason" value="7">
+            It's inclusion of informatino <strong>related</strong> or unrelated <strong>to other texts</strong>
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="post_reason" value="8">
+            Other (please explain):
+          </label>
+        </div>
+        <input type="text" name="post_reason_other_text" class="form-control post_reason_other_text">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default source_evaluation_modal_close">Back to Library</button>
@@ -107,17 +215,9 @@
       </div>
       <%= form_for @stance, :html => { :id => "stance_form" } do |f| %>
         <div class="modal-body">
+          <%= f.hidden_field :source_order %>
 
-          <%= f.radio_button :supporting, 0 %>
-          <%= f.label :supporting, "Yes, the U.S. should legalize prostitution/sex work", :value => 0 %>
-          <br>
-          <%= f.radio_button :supporting, 1 %>
-          <%= f.label :supporting, "No, the U.S. should not legalize prostitution/sex work", :value => 1 %>
-          <br>
-          <%= f.radio_button :supporting, 2 %>
-          <%= f.label :supporting, "Other", :value => 2 %>
-          <br><br>
-          <%= f.text_area :statement, :class => "form-control", :rows => 20, 
+          <%= f.text_area :statement, :class => "form-control", :rows => 20,
             :placeholder => "Please write an argument about whether or not the U.S. should legalize prostitution/sex work.  Please be sure to use specific information from the sources provided." %>
 
         </div>

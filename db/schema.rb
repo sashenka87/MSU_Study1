@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140320051046) do
+ActiveRecord::Schema.define(version: 20190413073241) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "participants", force: true do |t|
+  create_table "participants", force: :cascade do |t|
     t.string   "session_id"
     t.string   "ip_address"
     t.string   "first_name"
@@ -25,11 +25,12 @@ ActiveRecord::Schema.define(version: 20140320051046) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "task_analysis"
   end
 
   add_index "participants", ["session_id"], name: "index_participants_on_session_id", using: :btree
 
-  create_table "rankings", force: true do |t|
+  create_table "rankings", force: :cascade do |t|
     t.integer  "stance_id"
     t.string   "source_name"
     t.integer  "category"
@@ -47,7 +48,7 @@ ActiveRecord::Schema.define(version: 20140320051046) do
 
   add_index "rankings", ["stance_id"], name: "index_rankings_on_stance_id", using: :btree
 
-  create_table "sources", force: true do |t|
+  create_table "sources", force: :cascade do |t|
     t.integer  "stance_id"
     t.integer  "order"
     t.integer  "time_duration"
@@ -58,17 +59,24 @@ ActiveRecord::Schema.define(version: 20140320051046) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "source_name"
-    t.integer  "depth",         default: 0
+    t.integer  "depth",                  default: 0
+    t.integer  "pre_reason"
+    t.string   "pre_reason_other_text"
+    t.integer  "like_text"
+    t.integer  "sentiment"
+    t.integer  "post_reason"
+    t.string   "post_reason_other_text"
   end
 
   add_index "sources", ["stance_id"], name: "index_sources_on_stance_id", using: :btree
 
-  create_table "stances", force: true do |t|
+  create_table "stances", force: :cascade do |t|
     t.integer  "participant_id"
     t.integer  "supporting"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "statement"
+    t.string   "source_order"
   end
 
   add_index "stances", ["participant_id"], name: "index_stances_on_participant_id", using: :btree
