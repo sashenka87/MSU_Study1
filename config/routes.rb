@@ -12,10 +12,10 @@ MultipleSourceUse::Application.routes.draw do
   resources :rankings
 
   get "/dashboard" => 'dashboard#index'
-  get "dashboard/participants", :defaults => { :format => :csv }
-  get "dashboard/rankings", :defaults => { :format => :csv }
-  get "dashboard/sources", :defaults => { :format => :csv }
-  get "dashboard/stances", :defaults => { :format => :csv }
+  get "dashboard/participants"
+  get "dashboard/rankings"
+  get "dashboard/sources"
+  get "dashboard/stances"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -9,22 +9,22 @@
             Participants <span class="badge"><%= @participant_count %></span>
             <%= link_to "Participant List", participants_path %>
           </td>
-          <td><%= link_to "Download", dashboard_participants_path, :class => "btn btn-success btn-sm" %></td>
+          <td><%= link_to "Download", dashboard_participants_path(:format => :csv), :class => "btn btn-success btn-sm" %></td>
         </tr>
 
         <tr>
           <td>Stances <span class="badge"><%= @stance_count %></span></td>
-          <td><%= link_to "Download", dashboard_stances_path, :class => "btn btn-success btn-sm" %></td>
+          <td><%= link_to "Download", dashboard_stances_path(:format => :csv), :class => "btn btn-success btn-sm" %></td>
         </tr>
 
         <tr>
           <td>Sources <span class="badge"><%= @source_count %></span></td>
-          <td><%= link_to "Download", dashboard_sources_path, :class => "btn btn-success btn-sm" %></td>
+          <td><%= link_to "Download", dashboard_sources_path(:format => :csv), :class => "btn btn-success btn-sm" %></td>
         </tr>
 
         <tr>
           <td>Rankings <span class="badge"><%= @ranking_count %></span></td>
-          <td><%= link_to "Download", dashboard_rankings_path, :class => "btn btn-success btn-sm" %></td>
+          <td><%= link_to "Download", dashboard_rankings_path(:format => :csv), :class => "btn btn-success btn-sm" %></td>
         </tr>
 
       </tbody>
