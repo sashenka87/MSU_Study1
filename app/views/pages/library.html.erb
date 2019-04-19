@@ -1,14 +1,16 @@
+<% if @participant.id % 2 == 0 %>
+<% prompt = "Write a research report for policy makers about the causes of the urban housing crisis." %>
+<% else %>
+<% prompt = "Write a research report for policy makers about the solution to the urban housing crisis." %>
+<% end %>
+
 <p>
   Please use the source library below to research information to respond to the following prompt:
 </p>
 
 <div class="alert alert-info">
   <h4>
-    <% if @participant.id % 2 == 0 %>
-      Write a research report for policy makers about the causes of the urban housing crisis.
-    <% else %>
-      Write a research report for policy makers about the solution to the urban housing crisis.
-    <% end %>
+    <%= prompt %>
   </h4>
 </div>
 
