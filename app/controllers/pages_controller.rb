@@ -75,12 +75,12 @@ class PagesController < ApplicationController
 
   def source_names
     [
-      ["Prostitution is Female Oppression", "blog"],
-      ["Prostitution is Violent, Trust Me", "essay"],
-      ["Prostitution Increases Trafficking", "newspaper"],
-      ["Sex Work is a Civil Right", "public_opinion"],
-      ["Sex Work Improves Public Health", "tweets"],
-      ["Sex Workers Have a Right to Labor", "wikipedia"],
+      ["Source 1", "source1"],
+      ["Source 2", "source2"],
+      ["Source 3", "source3"],
+      ["Source 4", "source4"],
+      ["Source 5", "source5"],
+      ["Source 6", "source6"],
       ["Source 7", "source7"],
       ["Source 8", "source8"],
       ["Source 9", "source9"],
