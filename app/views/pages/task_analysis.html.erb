@@ -2,8 +2,17 @@
   <div class="col-sm-12 col-md-8 col-md-offset-2">
     <div class="alert alert-info">
       <p>
-        You will be asked to write an argument about whether or not the U.S. should
-        legalize prostitution / sex work.
+        <% if @participant.id % 2 == 0 %>
+          You will be asked to write a research report for policy makers about the causes of the urban
+          housing crisis.
+        <% else %>
+          You will be asked to write a research report for policy makers about the solutions to the urban
+          housing crisis.
+        <% end %>
+      </p>
+
+      <p>
+        Please explain what this assignment is asking you to do and your goals for this task.
       </p>
     </div>
 

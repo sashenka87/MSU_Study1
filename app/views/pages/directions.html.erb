@@ -6,7 +6,11 @@
 
     <div class="alert alert-success">
       <h4 class="no-bottom">
-        Write an <strong>argument</strong> about whether or not the U.S. should <strong>legalize prostitution/sex work.</strong>
+        <% if @participant.id % 2 == 0 %>
+          Write a research report for policy makers about the causes of the urban housing crisis.
+        <% else %>
+          Write a research report for policy makers about the solutions to the urban housing crisis.
+        <% end %>
       </h4>
     </div>
 
