@@ -75,18 +75,18 @@ class PagesController < ApplicationController
 
   def source_names
     [
-      ["Source 1", "source1"],
-      ["Source 2", "source2"],
-      ["Source 3", "source3"],
-      ["Source 4", "source4"],
-      ["Source 5", "source5"],
-      ["Source 6", "source6"],
-      ["Source 7", "source7"],
-      ["Source 8", "source8"],
-      ["Source 9", "source9"],
-      ["Source 10", "source10"],
-      ["Source 11", "source11"],
-      ["Source 12", "source12"]
+      ["Young Adult Migration Causes UHC", "source1"],
+      ["Immigrants and Baby Boomers Cause UHC", "source2"],
+      ["Zoning is the Solution to the UHC", "source3"],
+      ["High-Density Construction Will Solve the UHC", "source4"],
+      ["Corporate Job Growth Causes the UHC", "source5"],
+      ["AirBnB Rentals Causes the UHC", "source6"],
+      ["Affordable Housing is the Solution to the UHC", "source7"],
+      ["Rent Stabilization is the Solution to the UHC", "source8"],
+      ["High Income Families Cause the UHC", "source9"],
+      ["Unbalanced Development Causes the UHC", "source10"],
+      ["Development is the Solution to the UHC", "source11"],
+      ["Suburban Infrastructure is the Solution to the UHC", "source12"]
     ]
   end
 end
