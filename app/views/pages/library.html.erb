@@ -1,7 +1,7 @@
 <% if @participant.id % 2 == 0 %>
-<% prompt = "Write a research report for policy makers about the causes of the urban housing crisis." %>
+<% prompt = "Write a research report for policy makers about the <u>causes</u> of the urban housing crisis." %>
 <% else %>
-<% prompt = "Write a research report for policy makers about the solution to the urban housing crisis." %>
+<% prompt = "Write a research report for policy makers about the <u>solution</u> to the urban housing crisis." %>
 <% end %>
 
 <p>
@@ -115,7 +115,7 @@
         </div>
         <div class="modal-body">
           <p>
-            <%= link_to "Click here to learn more about this source", "#", :class => "btn btn-default more_source_info" %>
+            <%= link_to "Click here for the source citation", "#", :class => "btn btn-default more_source_info" %>
           </p>
 
           <%= render "sources/#{source[1]}" %>
@@ -144,12 +144,12 @@
           Please rate this source:
         </div>
 
-        <p class="instructions">How <strong>trustworthy</strong> was this source?</p>
+        <p class="instructions">How much did you <strong>like</strong> this source?</p>
         <%= render "shared/mm_line", :num => 50, :left_text => "Not at all", :right_text => "A lot" %>
-        <p class="instructions">How much did this source <strong>inform you</strong> about the topic?</p>
+        <p class="instructions">Please rate this text <strong>overall</strong> </p>
         <%= render "shared/mm_line", :num => 40, :left_text => "Very negative", :right_text => "Very positive" %>
 
-        <p class="instructions">Please select the <strong>main</strong> reason why you <strong>liked or disliked</strong> this text:</p>
+        <p class="instructions">Please select the <strong>main</strong> reason why you <strong>liked</strong> or <strong>disliked</strong> this text:</p>
         <div class="radio">
           <label>
             <input type="radio" name="post_reason" value="1">
@@ -214,7 +214,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">
-          <%= prompt %>
+          You selected that you were ready to compose your research report. Please evaluate your source use overall and explain how you knew that you were ready to compose a written response.  
         </h4>
       </div>
       <%= form_for @stance, :html => { :id => "stance_form" } do |f| %>
@@ -222,7 +222,7 @@
           <%= f.hidden_field :source_order %>
 
           <%= f.text_area :statement, :class => "form-control", :rows => 20,
-            :placeholder => "Please write an argument about whether or not the U.S. should legalize prostitution/sex work.  Please be sure to use specific information from the sources provided." %>
+            :placeholder => "Please evaluate your source use, overall, and explain how you determined that you had enough information to compose your written response." %>
 
         </div>
         <div class="modal-footer">
