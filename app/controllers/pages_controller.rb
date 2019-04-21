@@ -78,15 +78,15 @@ class PagesController < ApplicationController
       ["Young Adult Migration Causes UHC", "source1"],
       ["Immigrants and Baby Boomers Cause UHC", "source2"],
       ["Zoning is the Solution to the UHC", "source3"],
-      ["High-Density Construction Will Solve the UHC", "source4"],
-      ["Corporate Job Growth Causes the UHC", "source5"],
+      ["High-Density Buildings are the Solution", "source4"],
+      ["Corporate Job Growth is the Cause", "source5"],
       ["AirBnB Rentals Causes the UHC", "source6"],
-      ["Affordable Housing is the Solution to the UHC", "source7"],
-      ["Rent Stabilization is the Solution to the UHC", "source8"],
+      ["Affordable Housing is the Solution", "source7"],
+      ["Rent Stabilization is the Solution", "source8"],
       ["High Income Families Cause the UHC", "source9"],
-      ["Unbalanced Development Causes the UHC", "source10"],
+      ["Unbalanced Development is the Cause", "source10"],
       ["Development is the Solution to the UHC", "source11"],
-      ["Suburban Infrastructure is the Solution to the UHC", "source12"]
+      ["Suburban Infrastructure is the Solution", "source12"]
     ]
   end
 end
