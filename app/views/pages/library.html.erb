@@ -216,7 +216,9 @@
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">
-          You selected that you were ready to compose your research report. Please evaluate your source use overall and explain how you knew that you were ready to compose a written response.  
+          You indicated that you were ready to compose your research report. 
+          <br>
+          Please explain how you knew that you were ready to compose a written response.  
         </h4>
       </div>
       <%= form_for @stance, :html => { :id => "stance_form" } do |f| %>
@@ -224,7 +226,7 @@
           <%= f.hidden_field :source_order %>
 
           <%= f.text_area :statement, :class => "form-control", :rows => 20,
-            :placeholder => "Please evaluate your source use, overall, and explain how you determined that you had enough information to compose your written response." %>
+            :placeholder => "Please explain how you decided that you were ready to compose your research report." %>
 
         </div>
         <div class="modal-footer">
